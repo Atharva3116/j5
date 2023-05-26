@@ -1,0 +1,421 @@
+Q.1  Write a JAVA program to print the following pattern.   
+1
+2 2 
+3 3 3 
+4 4 4 4  
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int i, j;
+        for(i=1;i<=4;i++)
+        {
+            for(j=1;j<=i;j++)
+            {
+                System.out.print(i+" ");
+                
+            }
+            System.out.println();
+        }
+    }
+}
+  
+Q.2  Write a JAVA program to print the following pattern.   
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5  
+public class Main 
+{
+    public static void main(String args[])
+    {
+        int i, j,n;
+        for(i=0; i<5; i++)
+        {
+            n=1;
+            for(j=0; j<=i; j++)
+            {
+                System.out.print(n+ " ");
+                n++;   
+                
+            }
+            System.out.println();
+            
+        }
+    }
+}  
+ 
+Q.3 Write a JAVA program to print the following pattern.   
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int i, j;
+        for(i=5;i>=1;i--)
+        {
+            for(j=i;j>=1;j--)
+            {
+                System.out.print(j+" ");
+                
+            }
+            System.out.println();
+        }
+    }
+}  
+
+Q.4 Write a java program to calculate the area and perimeter of square.
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int s;
+        float area,perimeter;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter side of Square:");
+        s=Integer.parseInt(br.readLine());
+        area=s*s;
+        perimeter=4*s;
+        System.out.println("Area of Square:"+area);
+        System.out.println("Perimeter of Square:"+perimeter);
+    }
+}  
+  
+Q.5 Write a JAVA program to print the following pattern.   
+        	   * 
+                                 ** 
+                                ***   
+                               **** 
+                              *****   
+public class Main
+{
+    public static void main(String args[])
+    {
+        int i, j;
+        for (i=0; i<5; i++)
+        {
+            for (j=5-i; j>1; j--)
+            {
+                System.out.print(" ");
+                
+            }
+            for (j=0; j<=i; j++ )
+            {
+                System.out.print("* ");
+                
+            }
+            System.out.println();
+        }
+    }
+}
+
+Q.6 Write a JAVA program to print the following pattern.   
+ 	 	* 
+** 
+*** 
+**** 
+***** 
+public class Main 
+{
+    public static void main(String args[])
+    {
+        int i, j;
+        for(i=0; i<5; i++)
+        {
+            for(j=0; j<=i; j++)
+            {
+                System.out.print("* ");
+                
+            }
+            System.out.println();
+            
+        }
+        
+    }   
+}  
+   
+Q.7  Write the  JAVA program to calculate the addition of 5 numbers using array.  
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int [] arr = new int [] {2,4,6,8,10};  
+        int sum = 0;  
+        for (int i = 0; i < arr.length; i++)
+        {   
+            sum = sum + arr[i];  
+        }  
+        System.out.println("Sum of all the elements of an array: " + sum);  
+    }  
+}  
+  
+Q.8 Write a JAVA program to calculate area and perimeter of a rectangle. 
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int l,b;
+        double area,perimeter;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter length of rectangle:");
+        l=Integer.parseInt(br.readLine());
+        System.out.println("Enter breadth of rectangle:");
+        b=Integer.parseInt(br.readLine());
+        area=l*b;
+        perimeter=2*(l*b);
+        System.out.println("Area of Rectangle:"+area);
+        System.out.println("Perimeter of Rectangle:"+perimeter);
+    }
+}  
+ 
+Q.9  Write a JAVA program to find a factorial of given a number.   
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int i,fact=1,n;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter Number:");
+        n=Integer.parseInt(br.readLine());
+        for(i=1;i<=n;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+n+":"+fact);
+    }
+}   
+
+Q.10 Write a JAVA program to check number is a Armstrong or not.   
+import java.util.Scanner;
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        int n,count=0,a,rem,temp,sum=0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any integer you want to check:");
+        n = s.nextInt();
+        a=n;
+        temp= n;
+        while(a > 0)
+        {
+            a = a / 10;
+            count++;
+        }
+        while(n > 0)
+        {
+            rem= n % 10;
+            sum = (int) (sum+Math.pow(rem,count));
+            n = n / 10;
+        }
+        if(sum == temp)
+        {
+            System.out.println("Given number is Armstrong");
+        }
+        else
+        {
+            System.out.println("Given number is not Armstrong");
+        }    
+    }
+}
+
+Q.11 Write a JAVA program to find the reverse of a entered number.  
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int n,rev=0;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter Number:");
+        n=s.nextInt();
+        while(n!=0)
+        {
+            int rem=n%10;
+            rev=rev*10+rem;
+            n=n/10;
+        }
+        System.out.println("The reverse of the given number is: " + rev);
+    }
+} 
+
+Q.12 Write a JAVA program to calculate area and circumference of a circle.   
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int r;
+        double PI=3.14;
+        double area,circumference;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter radius of Circle:");
+        r=Integer.parseInt(br.readLine());
+        area=PI*r*r;
+        circumference=2*PI*r;
+        System.out.println("Area of Circle:"+area);
+        System.out.println("Circumference of Circle:"+circumference);
+    }
+}   
+
+Q.13 Write a java program to accept 5 numbers using command line arguments sort and display them.  
+ class Main
+{
+  public static void main(String args[])
+  {
+ 
+   System.out.println(args[0]);
+   System.out.println(args[1]); 
+   System.out.println(args[2]);
+   System.out.println(args[3]);
+   System.out.println(args[4]);
+  }
+}
+ 
+Q.14  Write a program to calculate the volume of cylinder.(Volume=pi*r2*h) 
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int r,h;
+        double PI=3.14;
+        double volume;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter radius:");
+        r=Integer.parseInt(br.readLine());
+        System.out.println("Enter height:");
+        h=Integer.parseInt(br.readLine());
+        volume=PI*r*r*h;
+        System.out.println("Volume of Circle:"+volume);
+        
+    }
+}    
+
+Q.15 Write a JAVA program to accept three dimensions length (l), breadth(b) and height(h) of a cuboid and print surface area (surface area=2(lb+lh+bh)).  
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        int l,b,h;
+        double surfacearea;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter length:");
+        l=Integer.parseInt(br.readLine());
+         System.out.println("Enter breadth:");
+        b=Integer.parseInt(br.readLine());
+        System.out.println("Enter height:");
+        h=Integer.parseInt(br.readLine());
+        surfacearea=2*(l*b+l*h+b*h);
+        System.out.println("Surface Area of Cuboid:"+surfacearea);
+        
+    }
+}   
+  
+Q.16 Write a program to print factorial of given number. 
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        int fact=1,n,i;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter number:");
+        n=s.nextInt();
+        System.out.println("Factorial:");
+        for(i=1;i<=n;i++)
+        {
+            fact=fact*i;
+            System.out.print(fact+"\t");
+        }
+    }
+}    
+
+Q.17 Write a JAVA program to find the prime number in between 1 to 50. 
+import java.util.Scanner;
+class Main
+{
+	public static void main(String arg[])	
+	{
+	    int i,count;
+	    System.out.println("Prime numbers between 1 to 50 are ");
+	    for(int j=2;j<=50;j++)
+	    {
+	        count=0;
+	        for(i=1;i<=j;i++)
+	        {
+	            if(j%i==0)
+	            {
+	                count++;
+	                
+	            }
+	            
+	        }
+	        if(count==2)
+	        System.out.print(j+"  ");
+	        
+	    }
+	    
+	}
+}
+  
+
+
+
+ 
+ Q. 26  Write a JAVA program to print the following pattern.
+            1
+            2  3
+            4  5  6 
+            7  8  9  10
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int i, j, k = 1;
+        for (i = 1; i <= 4; i++)
+        {
+            for (j = 1; j< i + 1; j++)
+            {
+                System.out.print(k++ + " ");
+            }
+            System.out.println();
+        }
+    }
+}  
+		
+		
+Q 27 Write a JAVA program to print the following pattern.
+       *  *  *  *
+       *  *  *
+       *  *
+       * 		 
+public class Main 
+{
+    public static void main(String args[])
+    {
+        int i, j;
+        for(i=4;i>0;i--)
+        {
+            for(j=i;j>0;j--)
+            {
+                System.out.print("* ");
+                
+            }
+            System.out.println();
+            
+        }
+        
+    }   
+}   
